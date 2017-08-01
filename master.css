@@ -2,7 +2,7 @@ html, body {
     width: 100%;
     height: 100%;
     margin: 0;
-    font-family: 'Advent Pro', sans-serif;
+    font-family: 'Muli', sans-serif;
     font-weight: 500;
     box-sizing: border-box;
 }
@@ -32,7 +32,7 @@ body {
     /* Full width */
     z-index: 9;
     height: 60px;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: #f9f9f9;
 }
 
 .navibar a {
@@ -45,18 +45,22 @@ body {
     font-size: 2em;
 }
 
+.navibar a:hover {
+  color: grey;
+}
 
 /*home*/
 
 .home {
     background-image: url('/Images/bandw.jpg');
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: 30% 50%;
     background-size: cover;
-    display: flex;
+    display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Muli', sans-serif;
 }
 
 @media screen and (min-width: 1200px) {
@@ -67,36 +71,69 @@ body {
 }
 
 .home h1 {
-    color: #40e9bb;
-    font-size: 5em;
+    color: #c9ff36;
+    font-size: 7em;
     text-shadow: 1px 1px 15px grey;
+    font-weight: 600;
 }
 
 .home h2 {
   color: white;
+  font-size: 3em;
 }
 
 /*about*/
 
-.about {}
+.about-header {
+  padding: 60px 60px;
+  background-color: #222;
+  color: white;
+}
 
+.about-header h1 {
+  font-size: 4em;
+  font-family: 'Syncopate';
+}
+
+.about-border {
+  /*border: 7px dashed #aded00;*/
+  border: 7px dashed #222;
+  padding: 30px;
+}
+
+.about-info {
+    padding: 60px 60px;
+  font-size: 20px;
+}
+
+.about-lists {
+  padding-top: 20px;
+}
+
+
+@media (min-width: 992px) {
+  .about {
+    height: 600px;
+  }
+  .about div {
+    height: 100%;
+  }
+}
 
 /*projects*/
-
-.projects {}
 
 .gallery {
     margin: 0 auto;
     padding: auto;
 }
 
-.gallery>div {
+.gallery div {
     position: relative;
     float: left;
     padding: 10px;
 }
 
-.gallery>div>img {
+.gallery img {
     display: block;
     width: 350px;
     transition: .1s transform;
@@ -104,11 +141,11 @@ body {
     /* hack */
 }
 
-.gallery>div:hover {
+.gallery div:hover {
     z-index: 1;
 }
 
-.gallery>div:hover>img {
+.gallery div:hover img {
     transform: scale(1.2, 1.2);
     transition: .3s transform;
 }
