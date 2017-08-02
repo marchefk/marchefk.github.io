@@ -23,6 +23,16 @@
 
 //////////////////////////////
 
+$('#toggle-button').on('click', function(){
+  if ($('.navibar').css('display') == 'none'){
+    $('.navibar').css('display', 'flex');
+  } else {
+    $('.navibar').css('display', 'none');
+    console.log('yes');
+  }
+});
+
+
 let checkWidth = function(){
   if($(window).width() >= 992){
     $('.vertical').addClass('vertical-text');

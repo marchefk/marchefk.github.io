@@ -11,12 +11,16 @@
 </head>
 
 <body>
-    <div id="navibar" class="navibar text-center">
+  <button id="toggle-button" class="toggle-button">
+    <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
+  </button>
+    <nav id="navibar" class="navibar text-center">
         <div><a href="#home" class="navi-home">HOME</a></div>
         <div><a href="#about" class="navi-about">ABOUT ME</a></div>
         <div><a href="#projects" class="navi-projects">PROJECTS</a></div>
         <div><a href="#contact" class="navi-contact">CONTACT</a></div>
-    </div>
+    </nav>
+
     <div id="home" class="home full">
         <div class="home-header">
             <h1>hello, I'm Eve</h1>
@@ -24,11 +28,11 @@
         </div>
     </div>
     <div id="about" class="row about">
-            <div class="col-xs-12 col-md-2 about-header">
-                <h1 class="vertical">ABOUT ME</h1>
-            </div>
-            <div class="col-xs-12 col-md-10 about-info">
-              <div class="about-border">
+        <div class="col-xs-12 col-md-2 about-header">
+            <h1 class="vertical">ABOUT ME</h1>
+        </div>
+        <div class="col-xs-12 col-md-10 about-info">
+            <div class="about-border">
                 <p>I'm a 23-year-old art graduate living in London. One year ago I started learning front end web development.</p>
                 <div class="row about-lists">
                     <div class="col-xs-6">
@@ -55,38 +59,38 @@
                             <li>Angular</li>
                         </ul>
                     </div>
-                  </div>
                 </div>
+            </div>
         </div>
     </div>
     <div id="projects" class="projects full">
-      <div class="projects-header text-center">
-        <h1 class="projects-title">PROJECTS</h1>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-md-10">
-        <div class="container container-fluid gallery cf">
-            <div>
-                <a href="https://s.codepen.io/marchefk/debug/ZeOZoG/NQkzYnwvOEoA">
-                    <img src="/Images/img1.jpg" class="thumbnail img-responsive">
-                </a>
+        <div class="projects-header text-center">
+            <h1 class="projects-title">PROJECTS</h1>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-10">
+                <div class="container container-fluid gallery cf">
+                    <div>
+                        <a href="https://s.codepen.io/marchefk/debug/ZeOZoG/NQkzYnwvOEoA">
+                            <img src="/Images/img1.jpg" class="thumbnail img-responsive">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://s.codepen.io/marchefk/debug/YNggrr/yokZEQKbzXQA">
+                            <img src="/Images/img2.jpg" class="thumbnail img-responsive">
+                        </a>
+                    </div>
+                    <div>
+                        <img src="http://placehold.it/350x250 " class="thumbnail img-responsive">
+                    </div>
+                    <div>
+                        <img src="http://placehold.it/350x250 " class="thumbnail img-responsive">
+                    </div>
+                </div>
             </div>
-            <div>
-                <a href="https://s.codepen.io/marchefk/debug/YNggrr/yokZEQKbzXQA">
-                    <img src="/Images/img2.jpg" class="thumbnail img-responsive">
-                </a>
-            </div>
-            <div>
-                <img src="http://placehold.it/350x250 " class="thumbnail img-responsive">
-            </div>
-            <div>
-                <img src="http://placehold.it/350x250 " class="thumbnail img-responsive">
+            <div class="col-md-2 projects-side">
             </div>
         </div>
-      </div>
-      <div class="col-md-2 projects-side">
-      </div>
-      </div>
     </div>
     <div id="contact" class="contact">
     </div>
