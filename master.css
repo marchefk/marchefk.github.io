@@ -45,22 +45,66 @@ h1 {
     z-index: 9;
     height: 60px;
     background-color: #f9f9f9;
-    padding: 15px 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
 }
 
-.navibar a {
+@media (min-width: 400px) {
+    .navibar {
+        padding-left: 30px;
+    }
+}
+
+.navibar div {
+    width: 25%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 400px) and (max-width: 992px) {
+    .navibar div {
+        width: 20%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .navibar div {
+        width: 15%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navibar div {
+        width: 12%;
+    }
+}
+
+@media (min-width: 1300px) {
+    .navibar div {
+        width: 10%;
+    }
+}
+
+.navibar div a {
     color: black;
     float: left;
     display: block;
-    text-align: center;
     text-decoration: none;
-    font-size: 1.5em;
     font-weight: 300;
-    margin: 0 20px 0 20px;
+    letter-spacing: inherit;
+    margin: auto;
+    transition: letter-spacing 0.35s ease-out, margin 0.35s ease-out;
 }
 
-.navibar a:hover {
+.navibar div a:hover {
     color: grey;
+    letter-spacing: 5px;
+    margin: 0;
+    transition: all 0.7s ease-in;
 }
 
 
@@ -80,9 +124,15 @@ h1 {
     text-align: center;
 }
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
     .home-header {
         width: 100%;
+        margin-left: 400px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .home-header {
         margin-left: 600px;
     }
 }
@@ -130,11 +180,14 @@ h1 {
     padding-top: 20px;
 }
 
+
+/* about and projects */
+
 @media (min-width: 992px) {
-    .about {
+    .about, .projects {
         height: 600px;
     }
-    .about div {
+    .about div, .projects .row {
         height: 100%;
     }
 }
@@ -144,7 +197,7 @@ h1 {
 
 .projects-header {
     background-color: #222;
-    height: 200px;
+    height: 150px;
     color: white;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -157,10 +210,15 @@ h1 {
     margin: 0;
 }
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
     .projects-header h1 {
         letter-spacing: 12px;
     }
+}
+
+.projects-side {
+    background-color: #222;
+    height: 100%;
 }
 
 .gallery {
