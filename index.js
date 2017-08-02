@@ -7,18 +7,6 @@
 //   'contact': '<i class="fa fa-envelope-open-o" aria-hidden="true"></i>'
 // }
 //
-// let homebottom = 1/2*($('#home').offset().top + $('#home').height());
-// $(window).on('scroll',function(){
-//
-//  // we round here to reduce a little workload
-//     let stop = Math.round($(window).scrollTop());
-//     if (stop > homebottom) {
-//         $('.navibar').removeClass('homenavi');
-//     } else {
-//         $('.navibar').addClass('homenavi');
-//     }
-//
-// });
 //
 //
 // navibar.forEach(function(e){

@@ -18,7 +18,6 @@ h1 {
 .full {
     height: 100%;
     width: 100%;
-    /* Add a top padd to avoid content overlay */
 }
 
 
@@ -36,7 +35,6 @@ h1 {
 .navibar {
     overflow: navdden;
     position: fixed;
-    transition: all 0.25s ease;
     /* Set the navibar to fixed position */
     top: 0;
     /* Position the navibar at the top of the page */
@@ -49,6 +47,8 @@ h1 {
     display: -ms-flexbox;
     display: flex;
     align-items: center;
+    border: none;
+    border-radius: 0;
 }
 
 @media (min-width: 400px) {
@@ -260,19 +260,3 @@ h1 {
 }
 
 .contact {}
-
-
-/*
-.homenavi {
-  background-color: transparent;
-  top: 40%;
-  position: absolute;
-  height: 30%;
-  font-size: 4em;
-}
-.homenavi a {
-  padding: 0px 90px;
-}
-.homenavi a:first-child {
-  display: none;
-}*/
