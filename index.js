@@ -25,6 +25,8 @@
 
 $('#toggle-button').on('click', function(){
   if ($('.navibar').css('display') == 'none'){
+    $('.navibar').css('display', '-webkit-box');
+    $('.navibar').css('display', '-ms-flexbox');
     $('.navibar').css('display', 'flex');
   } else {
     $('.navibar').css('display', 'none');
@@ -34,10 +36,10 @@ $('#toggle-button').on('click', function(){
 
 
 let checkWidth = function(){
-  if($(window).width() >= 992){
-    $('.vertical').addClass('vertical-text');
-  }else{
-    $('.vertical').removeClass('vertical-text');
+  if($(window).width() >= 700){
+    $('.navibar').css('display', '-webkit-box');
+    $('.navibar').css('display', '-ms-flexbox');
+    $('.navibar').css('display', 'flex');
   }
 }
 
@@ -46,4 +48,16 @@ let checkWidth = function(){
 $(document).ready( function() {
     $(window).resize(checkWidth);
     checkWidth();
+});
+
+let homebottom = 1/2*($('#home').offset().top + $('#home').height());
+$(window).on('scroll',function(){
+ // we round here to reduce a little workload
+    let stop = Math.round($(window).scrollTop());
+    if (stop > homebottom) {
+        $('.navibar').addClass('navi-scroll');
+    } else {
+        $('.navibar').removeClass('navi-scroll');
+    }
+
 });
