@@ -23,41 +23,39 @@
 
 //////////////////////////////
 
-$('#toggle-button').on('click', function(){
-  if ($('.navibar').css('display') == 'none'){
-    $('.navibar').css('display', '-webkit-box');
-    $('.navibar').css('display', '-ms-flexbox');
-    $('.navibar').css('display', 'flex');
+let toggleNavi = function(){
+  if ($('.navibar').hasClass('hidden')){
+    $('.navibar').removeClass('hidden');
   } else {
-    $('.navibar').css('display', 'none');
-    console.log('yes');
+    $('.navibar').addClass('hidden');
   }
-});
+}
 
+$('#toggle-button').on('click', toggleNavi);
 
 let checkWidth = function(){
   if($(window).width() >= 700){
-    $('.navibar').css('display', '-webkit-box');
-    $('.navibar').css('display', '-ms-flexbox');
-    $('.navibar').css('display', 'flex');
+    $('.navibar').removeClass('hidden');
+    let homebottom = 1/2*($('#home').offset().top + $('#home').height());
+    $(window).on('scroll',function(){
+     // we round here to reduce a little workload
+        let stop = Math.round($(window).scrollTop());
+        if (stop > homebottom) {
+          if(!$('.navibar').hasClass('navi-scroll')){
+            $('.navibar').addClass('navi-scroll');
+          }
+        } else {
+            $('.navibar').removeClass('navi-scroll');
+        }
+    });
+  }
+  if($(window).width() < 700){
+    $('.navi-elem').on('click', toggleNavi);
   }
 }
 
 
 
-$(document).ready( function() {
+
     $(window).resize(checkWidth);
     checkWidth();
-});
-
-let homebottom = 1/2*($('#home').offset().top + $('#home').height());
-$(window).on('scroll',function(){
- // we round here to reduce a little workload
-    let stop = Math.round($(window).scrollTop());
-    if (stop > homebottom) {
-        $('.navibar').addClass('navi-scroll');
-    } else {
-        $('.navibar').removeClass('navi-scroll');
-    }
-
-});
