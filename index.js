@@ -6,8 +6,6 @@ let toggleNavi = function() {
     }
 }
 
-$('#toggle-button').on('click', toggleNavi);
-
 let checkWidth = function() {
     if ($(window).width() >= 700) {
         $('.navibar').removeClass('hidden');
@@ -28,6 +26,13 @@ let checkWidth = function() {
         $('.navi-elem').on('click', toggleNavi);
     }
 }
+
+$('a[href*=\\#]').on('click', function(event){
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+});
+
+$('#toggle-button').on('click', toggleNavi);
 
 $(window).resize(checkWidth);
 checkWidth();
