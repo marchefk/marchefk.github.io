@@ -241,7 +241,14 @@ body {
     justify-content: space-between;
 }
 
+@media (min-width: 1080px){
+  .about {
+    height: 100%;
+  }
+}
+
 /* projects */
+
 
 .gallery {
     display: -webkit-box;
@@ -272,6 +279,10 @@ body {
 }
 
 @media (min-width: 1176px){
+  .projects {
+    height: 100%;
+  }
+
   .gallery {
     flex-direction: row;
     margin-left: -13%;
@@ -288,3 +299,47 @@ body {
 }
 
 /* contact */
+
+.contact {
+  background-color: #222;
+  height: 100%;
+  text-align: center;
+}
+
+.contact-info {
+  color: #f9f9f9;
+  font-size: 16px;
+}
+
+.contact-info h2 {
+  letter-spacing: 4px;
+}
+
+.contact-href {
+  display: inline-block;
+  width: 100px;
+  height: 80px;
+  border: 1px solid #f9f9f9;
+  text-align: center;
+  color: #f9f9f9;
+  vertical-align: bottom;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.contact-href:first-of-type {
+  margin-right: 20px;
+}
+
+.contact-href:hover {
+  border-color: #c9ff36;
+  background-color: #c9ff36;
+  color: #222;
+}
+
+@media (min-width: 850px){
+  .contact {
+    text-align: inherit;
+  }
+
+}
