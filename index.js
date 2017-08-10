@@ -1,8 +1,8 @@
 let toggleNavi = function() {
-    if ($('.navibar').hasClass('hidden')) {
-        $('.navibar').removeClass('hidden');
-    } else {
+    if (!$('.navibar').hasClass('hidden')) {
         $('.navibar').addClass('hidden');
+    } else {
+        $('.navibar').removeClass('hidden');
     }
 }
 
@@ -27,12 +27,12 @@ let checkWidth = function() {
     }
 }
 
+$('#toggle-button').on('click', toggleNavi);
+
 $('a[href*=\\#]').on('click', function(event){
     event.preventDefault();
     $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
 });
-
-$('#toggle-button').on('click', toggleNavi);
 
 $(window).resize(checkWidth);
 checkWidth();
