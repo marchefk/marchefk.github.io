@@ -48,7 +48,6 @@ body {
   }
 }
 
-
 /* navigation */
 
 .hidden {
@@ -101,26 +100,25 @@ body {
   transition: all 0.5s ease-in;
 }
 
+
 @media (max-width: 440px) {
   .navibar {
     height: 100%;
-    flex-direction: column;
-    justify-content: space-around;
-    z-index: 3;
-    background-color: #f9f9f9;
-  }
-  .navibar div a {
-    color: black;
   }
 }
 
 @media (min-width: 400px) and (max-width: 700px) {
   .navibar {
-    height: 60%;
+    height: 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  .navibar {
     flex-direction: column;
     justify-content: space-around;
     z-index: 3;
-    background-color: ##f9f9f9;
+    background-color: #f9f9f9;
   }
   .navibar div {
     width: 90%;
@@ -128,7 +126,12 @@ body {
   .navibar div a {
     color: black;
   }
+  .navibar div a:hover {
+    color: grey;
+  }
 }
+
+
 
 @media (min-width: 700px) {
   .navibar {
@@ -208,25 +211,30 @@ body {
   text-align: center;
 }
 
+.home-header h1 {
+  color: #c9ff36;
+  font-size: 6em;
+  text-shadow: 1px 1px 15px grey;
+  font-weight: 600;
+}
+
+.home-header h2 {
+  color: white;
+  font-size: 2.5em;
+}
+
+@media (min-width: 600px){
+  .home-header h1 {
+    font-size: 7em;
+  }
+}
+
 @media (min-width: 1200px) {
   .home-header {
     width: 100%;
     margin-left: 400px;
   }
 }
-
-.home h1 {
-  color: #c9ff36;
-  font-size: 7em;
-  text-shadow: 1px 1px 15px grey;
-  font-weight: 600;
-}
-
-.home h2 {
-  color: white;
-  font-size: 2.5em;
-}
-
 
 /*about*/
 
@@ -303,13 +311,14 @@ body {
 
 .contact {
   background-color: #222;
-  height: 100%;
   text-align: center;
+  min-height: 100%;
 }
 
 .contact-info {
   color: #f9f9f9;
   font-size: 16px;
+  padding-bottom: 50px;
 }
 
 .contact-info h2 {

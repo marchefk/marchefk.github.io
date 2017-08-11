@@ -34,5 +34,5 @@ $('a[href*=\\#]').on('click', function(event){
     $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
 });
 
-$(window).resize(checkWidth);
 checkWidth();
+$(window).resize(checkWidth);
