@@ -23,7 +23,9 @@ let checkWidth = function() {
         });
     }
     if ($(window).width() < 700) {
-        $('.navi-elem').on('click', toggleNavi);
+        $('.navi-elem').on('click', function(){
+          $('.navibar').addClass('hidden');
+        });
     }
 }
 
