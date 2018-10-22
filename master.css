@@ -242,9 +242,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
    flex-direction: column;
   flex-wrap: wrap;
+}
+
+.gallery-img {
+  padding: 1%;
 }
 
 .gallery img {
@@ -269,8 +273,8 @@ body {
   }
   .gallery {
     flex-direction: row;
-    margin-left: -10%;
-    margin-right: -10%;
+    margin-left: -8%;
+    margin-right: -8%;
   }
 }
 
