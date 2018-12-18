@@ -2,8 +2,8 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-family: 'Major Mono Display', 'Montserrat', sans-serif;
+  /* font-weight: 400; */
   box-sizing: border-box;
 }
 
@@ -89,15 +89,14 @@ body {
   font-weight: 300;
   letter-spacing: inherit;
   margin: auto;
-  transition: letter-spacing 0.35s ease-out, margin 0.35s ease-out;
+  /* transition: letter-spacing 0.35s ease-out, margin 0.35s ease-out; */
   color: white;
 }
 
 .navibar div a:hover {
   color: #f1ffba;
-  letter-spacing: 5px;
-  margin: 0;
-  transition: all 0.5s ease-in;
+  /* letter-spacing: 5px; */
+  /* transition: all 0.5s ease-in; */
 }
 
 
@@ -186,19 +185,22 @@ body {
 
 .navi-scroll div a {
   color: black;
-  transition: all 0.5s ease-in;
+  /* transition: all 0.5s ease-in; */
 }
 
 .navi-scroll div a:hover {
   color: grey;
-  transition: all 0.5s ease-in;
+  /* transition: all 0.5s ease-in; */
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
 
 /*home*/
 
 .home {
-  background-image: url('/Images/comp4a.jpg');
+  background-image: url('/Images/comp4abw.jpg');
   background-repeat: no-repeat;
   background-position: 30% 50%;
   background-size: cover;
@@ -213,9 +215,10 @@ body {
 
 .home-header h1 {
   color: #c9ff36;
-  font-size: 6em;
+  font-size: 2em;
   text-shadow: 1px 1px 15px grey;
   font-weight: 600;
+  text-align: right;
 }
 
 .home-header h2 {
@@ -223,16 +226,19 @@ body {
   font-size: 2.5em;
 }
 
-@media (min-width: 600px){
+@media (min-width: 702px){
   .home-header h1 {
-    font-size: 7em;
+    font-size: 4em;
   }
 }
 
 @media (min-width: 1200px) {
   .home-header {
     width: 100%;
-    margin-left: 400px;
+    margin-right: 10%;
+  }
+  .home-header h1 {
+    font-size: 5em;
   }
 }
 
@@ -249,12 +255,13 @@ body {
 
 .gallery-img {
   padding: 1%;
+  width: 100%;
 }
 
 .gallery img {
   transition: 0.4s transform;
   transform: translateZ(0);
-  /* hack */
+  margin: auto;
 }
 
 @media (min-width: 992px) {
@@ -265,6 +272,9 @@ body {
     transform: scale(1.1, 1.1);
     transition: 0.4s transform;
   }
+  .gallery-img {
+    width: 50%;
+  }
 }
 
 @media (min-width: 1176px) {
@@ -273,8 +283,9 @@ body {
   }
   .gallery {
     flex-direction: row;
-    margin-left: -8%;
-    margin-right: -8%;
+  }
+  .gallery-img {
+    width: 33%;
   }
 }
 

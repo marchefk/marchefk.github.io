@@ -36,5 +36,12 @@ $('a[href*=\\#]').on('click', function(event){
     $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
 });
 
+let navElems = document.getElementsByClassName('navi-elem');
+let navElemsArr = Array.from(navElems);
+navElemsArr.forEach(el => {
+  el.onmouseover = () => el.classList.add('uppercase');
+  el.onmouseleave = () => el.classList.remove('uppercase');
+})
+
 checkWidth();
 $(window).resize(checkWidth);
