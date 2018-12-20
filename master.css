@@ -24,8 +24,8 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;
-  letter-spacing: 10px;
-  color: #c5f73e;
+  /* letter-spacing: 10px; */
+  color: #C9FF36;
 }
 
 .section-header h1 {
@@ -34,14 +34,16 @@ body {
 
 @media (min-width: 850px) {
   .section {
-    padding-left: 13%;
-    padding-right: 13%;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding-right: 5%;
+    padding-left: 5%;
   }
   .section-header {
     padding-top: 150px;
     padding-bottom: 90px;
     text-align: right;
-    letter-spacing: 20px;
+    /* letter-spacing: 20px; */
   }
   .section-header h1 {
     font-size: 5em;
@@ -64,7 +66,7 @@ body {
   /* Full width */
   z-index: 9;
   height: 60px;
-  background-color: transparent;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,15 +88,15 @@ body {
   float: left;
   display: block;
   text-decoration: none;
-  font-weight: 300;
-  letter-spacing: inherit;
+  /* font-weight: 300; */
+  /* letter-spacing: inherit; */
   margin: auto;
   /* transition: letter-spacing 0.35s ease-out, margin 0.35s ease-out; */
-  color: white;
+  color: #252525;
 }
 
 .navibar div a:hover {
-  color: #f1ffba;
+  /* color: #252525; */
   /* letter-spacing: 5px; */
   /* transition: all 0.5s ease-in; */
 }
@@ -134,31 +136,13 @@ body {
 
 @media (min-width: 700px) {
   .navibar {
-    padding-left: 30px;
+    padding-right: 13%;
+    border-bottom: 1px solid #e9eaeb;
+    justify-content: flex-end;
   }
-}
-
-@media (min width: 700px) and (max-width: 992px) {
   .navibar div {
-    width: 20%;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1200px) {
-  .navibar div {
-    width: 15%;
-  }
-}
-
-@media (min-width: 1200px) and (max-width: 1300px) {
-  .navibar div {
-    width: 12%;
-  }
-}
-
-@media (min-width: 1300px) {
-  .navibar div {
-    width: 10%;
+    padding-left: 4%;
+    width: auto;
   }
 }
 
@@ -184,12 +168,7 @@ body {
 }
 
 .navi-scroll div a {
-  color: black;
-  /* transition: all 0.5s ease-in; */
-}
-
-.navi-scroll div a:hover {
-  color: grey;
+  color: #252525;
   /* transition: all 0.5s ease-in; */
 }
 
@@ -200,25 +179,23 @@ body {
 /*home*/
 
 .home {
-  background-image: url('/Images/comp4abw.jpg');
+  /* background-image: url('/Images/comp4abw.jpg');
   background-repeat: no-repeat;
   background-position: 30% 50%;
-  background-size: cover;
+  background-size: cover; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  justify-content: center;
   align-items: center;
   padding-top: 60px;
-  text-align: center;
 }
 
 .home-header h1 {
-  color: #c9ff36;
+  color: #252525;
   font-size: 2em;
-  text-shadow: 1px 1px 15px grey;
+  text-shadow: 4px 3px #C9FF36;
   font-weight: 600;
-  text-align: right;
+  text-align: left;
 }
 
 .home-header h2 {
@@ -234,8 +211,7 @@ body {
 
 @media (min-width: 1200px) {
   .home-header {
-    width: 100%;
-    margin-right: 10%;
+    padding-left: 13%;
   }
   .home-header h1 {
     font-size: 5em;
@@ -243,6 +219,17 @@ body {
 }
 
 /* projects */
+
+.projects {
+  padding-bottom: 100px;
+  background-color: #E9EAEB;
+}
+
+.projects-title {
+  background-color: #C9FF36;
+  color: #252525;
+  text-shadow: 4px 4px 0px #f9f9f9;
+}
 
 .gallery {
   display: -webkit-box;
@@ -265,6 +252,9 @@ body {
 }
 
 @media (min-width: 992px) {
+  .projects-title {
+    margin-left: 40%;
+  }
   .gallery div:hover {
     z-index: 1;
   }
@@ -281,11 +271,14 @@ body {
   .projects {
     min-height: 100%;
   }
+  .projects-title {
+    margin-left: 60%;
+  }
   .gallery {
     flex-direction: row;
   }
   .gallery-img {
-    width: 33%;
+    width: 33.3%;
   }
 }
 
@@ -302,9 +295,15 @@ body {
 /* contact */
 
 .contact {
-  background-color: #222;
+  background-color: #252525;
   text-align: center;
   min-height: 100%;
+}
+
+.contact-title {
+  color: #252525;
+  background-color: #E9EAEB;
+  text-shadow: 2px 2px #c9ff36;
 }
 
 .contact-info {
@@ -314,7 +313,7 @@ body {
 }
 
 .contact-info h2 {
-  letter-spacing: 4px;
+  /* letter-spacing: 4px; */
 }
 
 .contact-href {
@@ -342,5 +341,17 @@ body {
 @media (min-width: 850px) {
   .contact {
     text-align: inherit;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact-title {
+    margin-left: 40%;
+  }
+}
+
+@media (min-width: 1176px) {
+  .contact-title {
+    margin-left: 65%;
   }
 }
