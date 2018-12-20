@@ -125,10 +125,7 @@ body {
     width: 90%;
   }
   .navibar div a {
-    color: black;
-  }
-  .navibar div a:hover {
-    color: grey;
+    color: #252525;
   }
 }
 
@@ -231,19 +228,10 @@ body {
   text-shadow: 4px 4px 0px #f9f9f9;
 }
 
-.gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: flex-start;
-   flex-direction: column;
-  flex-wrap: wrap;
+.project-card {
+  padding: 1%;
 }
 
-.gallery-img {
-  padding: 1%;
-  width: 100%;
-}
 
 .gallery img {
   transition: 0.4s transform;
@@ -255,16 +243,20 @@ body {
   .projects-title {
     margin-left: 40%;
   }
-  .gallery div:hover {
+  .gallery-img {
+    padding-right: 1%;
+    /* width: 100%; */
+  }
+  /* .gallery div:hover {
     z-index: 1;
   }
   .gallery div:hover img {
     transform: scale(1.1, 1.1);
     transition: 0.4s transform;
-  }
-  .gallery-img {
+  } */
+  /* .gallery-img {
     width: 50%;
-  }
+  } */
 }
 
 @media (min-width: 1176px) {
@@ -274,12 +266,9 @@ body {
   .projects-title {
     margin-left: 60%;
   }
-  .gallery {
-    flex-direction: row;
-  }
-  .gallery-img {
+  /* .gallery-img {
     width: 33.3%;
-  }
+  } */
 }
 
 .cf:before, .cf:after {
@@ -354,4 +343,9 @@ body {
   .contact-title {
     margin-left: 65%;
   }
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
 }
