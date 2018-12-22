@@ -219,7 +219,11 @@ body {
 
 .projects {
   padding-bottom: 100px;
-  background-color: #E9EAEB;
+  background: rgb(249,249,249); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(249,249,249,1) 0%, rgba(233,234,235,1) 10%, rgba(233,234,235,1) 10%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(249,249,249,1) 0%,rgba(233,234,235,1) 10%,rgba(233,234,235,1) 10%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(249,249,249,1) 0%,rgba(233,234,235,1) 10%,rgba(233,234,235,1) 10%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#e9eaeb',GradientType=0 ); /* IE6-9 */
 }
 
 .projects-title {
@@ -229,13 +233,21 @@ body {
 }
 
 .project-card {
-  padding: 1%;
+  padding: 3% 0;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  margin-bottom: 3%;
+  background-color: white;
+}
+
+@media (min-width: 768px){
+  .project-card {
+    padding: 2% 0;
+  }
 }
 
 
 .gallery img {
-  transition: 0.4s transform;
-  transform: translateZ(0);
   margin: auto;
 }
 
@@ -245,7 +257,9 @@ body {
   }
   .gallery-img {
     padding-right: 1%;
-    /* width: 100%; */
+  }
+  .gallery img {
+    margin-left: 3%;
   }
   /* .gallery div:hover {
     z-index: 1;
@@ -284,19 +298,22 @@ body {
 /* contact */
 
 .contact {
-  background-color: #252525;
   text-align: center;
   min-height: 100%;
+  background: rgb(233,234,235); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(233,234,235,1) 0%, rgba(249,249,249,1) 20%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(233,234,235,1) 0%,rgba(249,249,249,1) 20%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(233,234,235,1) 0%,rgba(249,249,249,1) 20%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9eaeb', endColorstr='#f9f9f9',GradientType=0 ); /* IE6-9 */
 }
 
 .contact-title {
   color: #252525;
-  background-color: #E9EAEB;
-  text-shadow: 2px 2px #c9ff36;
+  background-color: #c9ff36;
+  text-shadow: 4px 4px white;
 }
 
 .contact-info {
-  color: #f9f9f9;
   font-size: 16px;
   padding-bottom: 50px;
 }
@@ -309,9 +326,9 @@ body {
   display: inline-block;
   width: 100px;
   height: 80px;
-  border: 1px solid #f9f9f9;
   text-align: center;
-  color: #f9f9f9;
+  background-color: #E9EAEB;
+  color: #252525;
   vertical-align: bottom;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -325,6 +342,18 @@ body {
   border-color: #c9ff36;
   background-color: #c9ff36;
   color: #222;
+  text-shadow: 3px 3px white;
+}
+
+.contact-href:active {
+  -webkit-box-shadow: inset 0px 0px 18px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: inset 0px 0px 18px 0px rgba(0,0,0,0.15);
+  box-shadow: inset 0px 0px 18px 0px rgba(0,0,0,0.15);
+  text-shadow: 1px 1px white;
+}
+
+a:focus, a:hover {
+  text-decoration: none;
 }
 
 @media (min-width: 850px) {
