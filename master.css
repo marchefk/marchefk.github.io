@@ -327,11 +327,17 @@ body {
   width: 100px;
   height: 80px;
   text-align: center;
-  background-color: #E9EAEB;
   color: #252525;
   vertical-align: bottom;
   padding-top: 15px;
   padding-bottom: 15px;
+  border: 1px solid #b0c144;
+  border-radius: 3px;
+  background: rgb(189,255,9); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(189,255,9,1) 0%, rgba(188,234,51,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(189,255,9,1) 0%,rgba(188,234,51,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(189,255,9,1) 0%,rgba(188,234,51,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bdff09', endColorstr='#bcea33',GradientType=0 ); /* IE6-9 */
 }
 
 .contact-href:first-of-type {
@@ -339,8 +345,7 @@ body {
 }
 
 .contact-href:hover {
-  border-color: #c9ff36;
-  background-color: #c9ff36;
+  border-color: #919e3a;
   color: #222;
   text-shadow: 3px 3px white;
 }
@@ -349,7 +354,6 @@ body {
   -webkit-box-shadow: inset 0px 0px 18px 0px rgba(0,0,0,0.15);
   -moz-box-shadow: inset 0px 0px 18px 0px rgba(0,0,0,0.15);
   box-shadow: inset 0px 0px 18px 0px rgba(0,0,0,0.15);
-  text-shadow: 1px 1px white;
 }
 
 a:focus, a:hover {
