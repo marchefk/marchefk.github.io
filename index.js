@@ -47,3 +47,4 @@ navElemsArr.forEach(el => {
 
 checkWidth();
 $(window).resize(checkWidth);
+window.addEventListener('load', AOS.refresh);
