@@ -29,8 +29,6 @@ let checkWidth = function() {
     }
 }
 
-AOS.init();
-
 $('#toggle-button').on('click', toggleNavi);
 
 $('a[href*=\\#]').on('click', function(event){
@@ -47,4 +45,7 @@ navElemsArr.forEach(el => {
 
 checkWidth();
 $(window).resize(checkWidth);
-window.addEventListener('load', AOS.refresh);
+
+AOS.init({
+  startEvent: 'load'
+});
