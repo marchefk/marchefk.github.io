@@ -1,3 +1,5 @@
+import AOS from 'aos';
+
 let toggleNavi = function() {
     if (!$('.navibar').hasClass('hidden')) {
         $('.navibar').addClass('hidden');
